@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Markers</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>CSS Color Markers</h1>
+    <div class="container">
+      <div class="marker red"> <!--multiple classes can be added to an element by separating w space, earlier classes can be overwritten by later ones-->
+        <div class="cap">
+        </div>
+        <div class="sleeve">
+        </div>
+      </div>
+      <div class="marker green">
+        <div class="cap">
+        </div>
+        <div class="sleeve">
+        </div>
+      </div>
+      <div class="marker blue">
+        <div class="cap">
+        </div>
+        <div class="sleeve">
+        </div>
+      </div>
+    </div>
+    <section class="input-container">
+        <fieldset>
+            <form>
+                <label><input type="radio" name="color-button">Red</label>
+                <label><input type="radio" name="color-button">Green</label>
+                <label><input type="radio" name="color-button">Blue</label>
+            </form>
+            <form>
+                <label class="picker"><input type="color" name="color-picker"></label>
+            </form>
+        </fieldset>
+    </section>
+  </body>
+</html>

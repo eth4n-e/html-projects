@@ -1,0 +1,18 @@
+* { /*universal selector*/
+    box-sizing: border-box;
+    /*
+        - box-sizing sets behavior of calculating size of container elements
+        - default: content-box model used
+            - when element has specific width, width calculated based only on element's content
+                - e.g. an image
+            - padding + border values get added to total width
+                - element grows to accomadate values
+            - idea: 
+                - if box has width of 100px, an element with width of 100px will not fit if it has any border / padding
+                    - padding / border values would be added to final rendered width (making element wider)
+        - border-box:
+            - total width of element, including padding / border, will be the explicit width set
+                - content of element will shrink to account for padding / border
+    */
+
+}

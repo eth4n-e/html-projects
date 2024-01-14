@@ -16,3 +16,60 @@
     */
 
 }
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f5f6f7;
+}
+
+.header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+}
+
+.gallery {
+    display: flex; 
+    /*
+    make element flexbox, one dimensional CSS layout
+        - main axis: defined by flex-direction property
+            - row (default): horizontal axis w flex items (children of flex container) from left to right
+            - row-reverse: horizontal axis with flex items from right to left
+            - column: vertical axis with flex items from top to bottom
+            - column-reverse: vertical axis with flex items from bottom to top
+                - note: axes / directions different depending on flex direction (values shown are for left-to-right text direction)
+    */
+    flex-direction: row;
+    flex-wrap: wrap; /*flex-wrap: affects how flex items behave when container too small, wrap value makes items wrap to next row*/
+    justify-content: center;
+    /* determines how items in flex container positioned along main axis (across the row / horizontal in this case) */
+    align-items: center;
+    /*positions flex content along cross axis (vertical in this case)*/
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    gap: 16px;
+    /*sets space between rows / columms*/
+}
+
+.gallery img { /*targets all img elements that are descendants of the element w class=gallery*/
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    /*object fit determines how images should behave
+        - cover: tells image to fill img container while maintaining aspect ratio, crops to fit
+    */
+    border-radius: 10px;
+    border: 3px double #fdb347;
+}
+
+.gallery::after { /*after pseudo-element creates an element that is last child of selected element (gallery)*/
+    /*use in this case: add an empty element after last image to push image to left*/
+    content: "";
+    width: 350px; /*same as other images */
+}

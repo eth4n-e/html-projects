@@ -47,6 +47,10 @@ p { /*creates space between the serving size text & 2/3cup(55g) text, affects th
   border: 0;
 }
 
+.medium {
+    height:5px;
+}
+
 .small-text {
   font-size: 0.85rem; /*.85rem is .85 of 16 (font size of html element)*/
 }
@@ -62,7 +66,36 @@ p { /*creates space between the serving size text & 2/3cup(55g) text, affects th
 }
 
 .left-container p {
-  margin: -5px -2px;
-  font-size: 2em;
-  font-weight: 700;
+    margin: -5px -2px;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.calories-info span {
+    margin: -7px -2px;
+    font-size: 2.4em;
+    font-weight: 700;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.indent {
+    margin-left: 1em;
+}
+
+.double-indent {
+    margin-left: 2em;
+}
+
+.daily-value p:not(.no-divider) { /*:not pseudo-selctor, selects all elements not matching given CSS rule (e.g. class= no-divider*/
+    border-bottom: 1px solid #888989;
+}
+
+.note {
+    font-size: 0.6rem;
+    margin: 5px 0;
+    padding: 0 8px;
+    text-indent: -8px;
 }
